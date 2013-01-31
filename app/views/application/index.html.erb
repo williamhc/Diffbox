@@ -1,0 +1,25 @@
+<% if not user_signed_in? %>
+  <div class="hero-unit">
+    <h1>Diffbox:<br>instant version control</h1>
+    <p>Diffbox is a free service that allows you to view your files in your Dropbox account, compare them against previous versions, and even revert your file if you wish.</p>
+    <p>
+      <%= link_to "Sign up now", new_user_registration_path, :class => "btn btn-primary btn-large" -%>
+    </p>
+  </div>  
+<% elsif not current_user.authorized_with_dropbox? %>
+  <div class="hero-unit">
+    <h1>One more step...</h1>
+    <p>In order to access your Dropbox files we need you to authorize the Diffbox app with your Dropbox account. You will be redirected back to Diffbox after authorizing. And you'll be ready to <em>get diff'n!</em></p>
+    <p>
+      <%= link_to "Authorize Diffbox", { :controller => "dropbox_auth", :action => "authorize"} , :class => "btn btn-primary btn-large" -%>
+    </p>
+  </div>
+<% else %>
+  <div class="hero-unit">
+    <h1>All done!...</h1>
+    <p>I haven't actually built the site yet but you're authorized!</p>
+    <p>
+      <%= link_to "Yay!", '/' , :class => "btn btn-primary btn-large" -%>
+    </p>
+  </div>
+<% end %>
