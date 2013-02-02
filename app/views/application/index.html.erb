@@ -15,11 +15,19 @@
     </p>
   </div>
 <% else %>
-  <div class="hero-unit">
-    <h1>All done!...</h1>
-    <p>I haven't actually built the site yet but you're authorized!</p>
-    <p>
-      <%= link_to "Yay!", '/' , :class => "btn btn-primary btn-large" -%>
-    </p>
-  </div>
+<div class="span2">
+  <ul class="nav nav-pills nav-stacked">
+    <%= render :partial => "nav_link", :collection => @links, :as => :link %>
+  </ul>
+</div>
+<div class="span4 well">
+  <% @file || "this is the first document" %>
+</div>
+<div class="span4 well">
+  this is the 2nd document
+</div>
+<div class="span2 well">
+  here are all the previous versions...
+</div>
+
 <% end %>

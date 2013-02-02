@@ -1,11 +1,11 @@
 Diffbox::Application.routes.draw do
+  get "application/home"
   get "dropbox_auth/authorize"
-
   get "dropbox_auth/authorize_callback"
+  match '/authed' => 'dropbox_auth#authorize_callback'
 
   devise_for :users
-
-  match '/authed' => 'dropbox_auth#authorize_callback'
+  match '/home/*path' => 'application#home'
   root :to => 'application#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.

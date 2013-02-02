@@ -10,4 +10,11 @@ class User < ActiveRecord::Base
   def authorized_with_dropbox?
     self.dropbox_access_secret.present? && self.dropbox_access_key.present?
   end
+
+  def dropbox_params
+    {
+      token: self.dropbox_access_key,
+      secret: self.dropbox_access_secret
+    }
+  end
 end

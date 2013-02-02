@@ -1,0 +1,7 @@
+<li >
+  <% if link.is_dir %>
+    <%= link_to link.path, "/home/#{link.path}" %>
+  <% else %>
+    <%= link_to link.path, "/files/#{link.path}" %>
+  <% end %>
+<li>
