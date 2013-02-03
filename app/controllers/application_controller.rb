@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   def home
     if user_signed_in?
       @client = Dropbox::API::Client.new(current_user.dropbox_params)
-      @links = @client.ls params[:path]
+      @links = @client.ls params[:path] || ''
       render 'index'
     end
   end
