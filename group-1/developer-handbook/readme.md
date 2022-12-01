@@ -8,4 +8,4 @@ This is the content
 
 ## Heading
 
-* [ ] buy milk
+* [x] buy milk
