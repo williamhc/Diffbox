@@ -1,3 +1,0 @@
-# Subpage
-
-Stuff about cats

@@ -2,10 +2,11 @@
 
 ## Group 1
 
-* [Grouping of Pages](README.md)
-  * [The First Page](group-1/grouping-of-pages/readme.md)
-
-## Group 2
-
-* [Group 2](group-2/group-2/README.md)
-  * [Subpage](group-2/group-2/subpage.md)
+* [Developer Handbook](README.md)
+  * [Page 1](group-1/developer-handbook/page-1.md)
+  * [The First Page](group-1/developer-handbook/readme.md)
+  * [Page 2](group-1/developer-handbook/page-2.md)
+  * [l](group-1/developer-handbook/readme.md)
+  * [Page 3](group-1/developer-handbook/page-3/README.md)
+    * [Page 6](group-1/developer-handbook/page-3/page-6/README.md)
+      * [Page 7](group-1/developer-handbook/page-3/page-6/page-7.md)
